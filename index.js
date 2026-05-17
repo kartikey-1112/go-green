@@ -1,13 +1,13 @@
 const jsonfile = require('jsonfile');
 const moment = require('moment');
 const simpleGit = require('simple-git');
+// set your real values:
+const GIT_USER_NAME = 'Kartikey Mishra';
+const GIT_USER_EMAIL = 'km030255@gmail.com';
+
+// OR remove the two addConfig lines so your existing git config is not overridden
 
 const FILE_PATH = './data.json';
-
-// Set the name/email you want the commits to use:
-const GIT_USER_NAME = 'Your Name';
-const GIT_USER_EMAIL = 'your-github-email@example.com';
-
 async function makeCommit(weeks = 0, days = 0) {
   try {
     const dateMoment = moment().add(weeks, 'weeks').add(days, 'days');
